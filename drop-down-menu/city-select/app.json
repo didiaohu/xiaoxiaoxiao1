@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#46c",
+    "navigationBarTitleText": "省市区联动选择器",
+    "navigationBarTextStyle":"light"
+  }
+}

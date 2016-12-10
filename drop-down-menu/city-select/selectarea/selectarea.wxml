@@ -1,0 +1,23 @@
+<view class="shade {{isShow ? 'show' : ''}}">
+    <view class="selector-area box box-tb">
+        <view class="handle-bar box box-lr box-align-center">
+            <text class="btn cancel flex" bindtap="cancel">取消</text>
+            <text class="btn confirm flex" bindtap="confirm">确定</text>
+        </view>
+        <view class="area-selector box box-lr">
+            <!--<view class="white-shade"></view>-->
+            <scroll-view class="selector province flex" data-type="province" scroll-y="true">
+            <view wx:for="{{proviceData}}" wx:key="item.id" bindtap="tapProvince" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" 
+            class="picker {{selectedProvince.index == index ? 'actived' : ''}}">{{item.fullNameDot}}</view>
+            </scroll-view>
+            <scroll-view class="selector city flex" data-type="city" scroll-y="true">
+            <view wx:for="{{cityData}}" wx:key="item.id" bindtap="tapCity" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" 
+            class="picker {{selectedCity.index == index ? 'actived' : ''}}">{{item.fullNameDot}}</view>
+            </scroll-view>
+            <scroll-view class="selector district flex" data-type="district" scroll-y="true">
+            <view wx:for="{{districtData}}" wx:key="item.id" bindtap="tapDistrict" data-full-name="{{item.fullName}}" data-index="{{index}}" data-code="{{item.code}}" 
+            class="picker {{selectedDistrict.index == index ? 'actived' : ''}}">{{item.fullNameDot}}</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

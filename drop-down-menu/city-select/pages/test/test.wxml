@@ -1,0 +1,6 @@
+<button bindtap="choosearea" type="primary">选择地址</button>
+
+<view class="txt">{{address||'您尚未选择送货地址哟'}}</view>
+
+<include src="../../selectarea/selectarea.wxml"/>
+<!--<template is="selectArea" />-->

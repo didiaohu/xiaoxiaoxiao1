@@ -1,0 +1,33 @@
+<view class="container">
+	<view class="filter-flex">
+		<view class="filter-tab">
+			<text bindtap="setFilterPanel" data-findex="1" class="{{showfilterindex==1?'active':''}}">商家分类</text>
+			<text bindtap="setFilterPanel" data-findex="2" class="{{showfilterindex==2?'active':''}}">所在地区</text>
+		</view>
+		<view class="filter-content" wx:if="{{showfilter}}">
+			<view class="filter-panel" wx:if="{{showfilterindex==1}}">
+				<view class="filter-panel-left">
+					<view wx:for="{{filterdata.cate}}" wx:key="{{item.id}}" bindtap="setCateIndex" data-cateindex="{{index}}" data-cateid="{{item.id}}" class="{{cateindex==index?'active':''}}">{{item.title}}</view>
+				</view>
+				<view class="filter-panel-right">
+					<view wx:for="{{filterdata.cate[cateindex].cate_two}}" wx:key="{{item.id}}" bindtap="setSubcateIndex" data-subcateindex="{{index}}" data-subcateid="{{item.id}}" class="{{subcateindex==index?'active':''}}">{{item.title}}</view>
+				</view>
+			</view>
+			<view class="filter-panel" wx:if="{{showfilterindex==2}}">
+				<view class="filter-panel-left">
+					<view wx:for="{{filterdata.area}}" wx:key="{{item.id}}" bindtap="setAreaIndex" data-areaindex="{{index}}" data-areaid="{{item.id}}" class="{{areaindex==index?'active':''}}">{{item.name}}</view>
+				</view>
+				<view class="filter-panel-right">
+					<view wx:for="{{filterdata.area[areaindex].zone}}" wx:key="{{item.id}}" bindtap="setSubareaIndex" data-subareaindex="{{index}}" data-subareaid="{{item.id}}" class="{{subareaindex==index?'active':''}}">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="filter-shadow" wx:if="{{showfilter}}" bindtap="hideFilter"></view>
+	</view>
+	<scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+		<view class="test-list">
+			<view class="test-item" wx:for="{{testdata}}" wx:key="{{item.id}}">{{item.name}}</view>
+		</view>
+		<icon class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop" type="download" size="36" color="#3399FF"></icon>
+	</scroll-view>
+</view>

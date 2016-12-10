@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "page/one/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "下拉菜单",
+    "navigationBarBackgroundColor": "#3399FF",
+    "backgroundColor": "#fff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

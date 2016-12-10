@@ -1,0 +1,45 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="nav">
+        <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+            <view class="content">区域</view>
+            <view class="icon"></view>
+        </view>
+        <view class="nav-son borders {{shownavindex == 2? 'active' : ''}}" bindtap="list" data-nav="2">
+            <view class="content">女装</view>
+            <view class="icon"></view>
+        </view>
+        <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+            <view class="content">排序</view>
+            <view class="icon"></view>
+        </view>
+    </view>
+    <view class="quyu {{qyopen ? 'slidown' : 'slidup'}} {{qyshow ? 'disappear':''}}">
+        <view class="qy quyu-left">
+            <view class="{{select1 == index ? 'current' : ''}}" wx:for="{{cityleft}}" bindtap="selectleft" data-city='{{index}}'>
+                {{index}}
+            </view>
+        </view>
+        <view class="qy quyu-center">
+            <view class="{{select2 == index ? 'current2' : ''}}" wx:for="{{citycenter}}" bindtap="selectcenter" data-city='{{index}}'>
+                {{index}}
+            </view>
+        </view>
+        <view class="qy quyu-right">
+            <view wx:for="{{cityright}}">
+                {{item}}
+            </view>
+        </view>
+    </view>
+    <view class="temp temp1 {{nzopen ? 'slidown' : 'slidup'}} {{nzshow ? 'disappear':''}}">
+        <view wx:for="{{content}}">
+            {{item}}
+        </view>
+    </view>
+    <view class="temp temp2 {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+        <view wx:for="{{content}}">
+            {{item}}
+        </view>
+    </view>
+    <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+</view>
