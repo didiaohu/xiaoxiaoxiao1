@@ -1,0 +1,99 @@
+@import "src/wetoast.wxss";
+
+/*
+ * reset
+ */
+page {
+  font-size: 14px;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #404141;
+  background: #f4f4f5;
+  padding-bottom: 60px;
+}
+
+.page__hd {
+  padding: 18px;
+}
+.page__title {
+  text-align: left;
+  font-size: 16px;
+}
+
+/*button*/
+.btn {
+  flex: 3;
+}
+.btn-code {
+  flex: 1;
+  margin-left: 1em;
+  color: #3f8af0;
+}
+.btn-area {
+  margin: 1.17647059em 15px 0.3em;
+  display: flex;
+}
+
+/*text*/
+.text {
+  margin: 1em 3em;
+  font-size: 1em;
+}
+
+/*code*/
+.code {
+  padding: 1em;
+}
+
+/*indent*/
+.indent {
+  text-indent: 2em;
+}
+.indent2 {
+  text-indent: 4em;
+}
+
+/*footer*/
+.footer {
+  padding: 0.5em 0;
+  color: #999999;
+  font-size: 14px;
+  text-align: center;
+  background: #000;
+}
+.footer_fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer__links {
+  font-size: 0;
+}
+.footer__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 .62em;
+  position: relative;
+  font-size: 14px;
+  color: #3f8af0;
+}
+.footer__link:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 1px;
+  border-left: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  left: -0.65em;
+  top: .36em;
+  bottom: .36em;
+}
+.footer__link:first-child:before {
+  display: none;
+}
+.footer__text {
+  padding: 0 .34em;
+  font-size: 12px;
+  color: #898989;
+}

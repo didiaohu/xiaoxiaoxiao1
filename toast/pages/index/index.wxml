@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<import src="../../src/wetoast.wxml"/>
+    <view class="btn" bindtap="onTimeToast">
+        click me~~
+    </view>
+
+<!-- wetoast -->
+<template is="wetoast" data="{{...__wetoast__}}"/>

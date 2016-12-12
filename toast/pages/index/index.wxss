@@ -1,0 +1,15 @@
+/* pages/index/index.wxss */
+.btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    background: #c3c943;
+    transform: translate3d(-50%,-50%, 0);
+}
