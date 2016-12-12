@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/filter/filter"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarBackgroundColor": "#3399FF",
+    "navigationBarTitleText": "级联筛选",
+    "navigationBarTextStyle": "white"
+  }
+}

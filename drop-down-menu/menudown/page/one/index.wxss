@@ -1,0 +1,162 @@
+/**
+ *question1:  (本小程序中没有用到)
+ *解决transform使用导致z-index失效而带来的层级问题 
+ *http://www.w3cplus.com/css/3d-transform-and-z-index.html
+ *http://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/
+ */
+ page{
+     height: 100%;
+ }
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+.nav{
+    position: relative;
+    z-index: 99;
+    display: flex;
+    border-top: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    background: #fff;
+}
+.nav-son{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    height: 40px;
+    align-items:center;
+    justify-content:center;
+    font-size: 14px;
+}
+.borders{
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+.content{
+    display: inline-block;
+}
+.icon{
+    display: inline-block;
+    border: 4px solid transparent;
+    border-top: 4px solid #9b9b9b;
+    margin-left: 5px;
+}
+.temp{
+    position: relative;
+    z-index: 4;
+}
+.temp1{
+    display: none;
+    width: 100%;
+    max-height: 550rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.temp2{
+    display: none;
+    width: 100%;
+    max-height: 750rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.slidedown{
+    transform:  translateY(0%);
+}
+.temp view{
+    border-bottom: 1px solid #d1d3d4;
+    font-size: 14px;
+    color: #666;
+}
+.quyu{
+    position: relative;
+    display: none;
+    height: 450rpx;
+    z-index: 5;
+}
+.quyu .qy{
+    overflow-y: scroll;
+    float: left;
+    width: 33.33%;
+    height: 450rpx;
+    line-height: 80rpx;
+    box-sizing: border-box; 
+    font-size: 14px;
+    color: #717273;
+}
+.qy view{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space:nowrap;  
+    padding-left: 15rpx; 
+}
+.quyu-left{
+    background: #c5c5c5;
+}
+.quyu-center{
+    background: #e0e0e0;
+}
+.quyu-right{
+    background: #fff;
+}
+.quyu-right view{
+    border-bottom: 1px solid #c5c5c5;
+}
+.current{
+    background: #e0e0e0;
+}
+.current2{
+    background: #fff;
+}
+.fullbg{
+    position: fixed;
+    top:0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    transition: all 2s;
+    opacity: 0;
+}
+.fullopacity{
+    opacity: .5;
+}
+.nav-son.active .content{
+    color: #61beff;
+}
+.nav-son.active .icon{
+    border-bottom: 4px solid #61beff;
+    border-top:0;
+}
+@keyframes slidown{
+    from{
+        transform:  translateY(-100%);
+    }
+    to{
+        transform:  translateY(0%);
+    }
+}
+.slidown{
+    display: block;
+    animation: slidown .7s ease-in both;
+}
+@keyframes slidup{
+    from{
+        transform:  translateY(0%);
+    }
+    to{
+        transform:  translateY(-100%);
+    }
+}
+.slidup{
+    display: block;
+    animation: slidup .7s ease-in both;
+}
+.disappear{
+    display: none;
+}

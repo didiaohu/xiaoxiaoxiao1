@@ -1,0 +1,85 @@
+.filter-tab{
+	display: flex;
+	width: 100%;
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #ddd;
+	position: relative;
+	z-index: 2;
+	background: #fff;
+}
+.filter-tab text{
+	flex: 1;
+	text-align: center;
+}
+.filter-tab text:after{
+	content: '';
+	display: inline-block;
+	vertical-align: 4rpx;
+	width: 0;
+	height: 0;
+	border-left: 12rpx solid transparent;
+	border-right: 12rpx solid transparent;
+	border-top: 12rpx solid #bbb;
+	margin-left: 8rpx;
+}
+.filter-tab text.active{
+	color: #3399FF;
+}
+.filter-tab:not(.sort-tab) text.active:after{
+	border-top: 0;
+	border-bottom: 12rpx solid #3399FF;
+}
+.filter-tab.sort-tab text.active:after{
+	border-top: 12rpx solid #3399FF;
+}
+.filter-panel{
+	display: flex;
+	background: #eee;
+	position: absolute;
+	width: 100%;
+	z-index: 13;
+	overflow: hidden;
+}
+.filter-panel-left,.filter-panel-right{
+	flex: 1;
+	line-height: 80rpx;
+	text-align: center;
+	max-height: 480rpx;
+	overflow-y: auto;
+}
+.filter-panel-left .active{
+	background: #fff;
+}
+.filter-panel-right .active{
+	color: #3399FF;
+}
+.filter-panel-right{
+	background: #fff;
+}
+.filter-panel-right:empty{
+	display: none;
+}
+.filter-shadow{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	background: rgba(0,0,0,.5);
+}
+.gototop{
+	position: fixed;
+	bottom: 20rpx;
+	right: 20rpx;
+	transition: all 0.3s;
+	opacity: 0;
+	transform: translateY(200rpx) rotate(180deg);
+}
+.gototop.active{
+	opacity: 0.7;
+	transform: translateY(0) rotate(180deg);
+}
+.test-item{
+	padding: 20rpx;
+	border-bottom: 1rpx solid #ddd;
+}

@@ -1,0 +1,22 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="page-bottom">
+        <view class="page-content">
+            <view  class="wc">
+                <text>第一个item1</text>
+            </view>
+            <view  class="wc">
+                <text>第二个item2</text>
+            </view>
+            <view  class="wc">
+                <text>第三个item3</text>
+            </view>
+            <view  class="wc">
+                <text>第四个item4</text>
+            </view>
+        </view>
+    </view>
+    <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top" style="{{translate}}">
+        <image bindtap="tap_ch" src="../../images/btn.png"></image>
+    </view>
+</view>
