@@ -1,0 +1,20 @@
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>
+<view class="container_wrap">  
+  <scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="container_wrap" scroll-y="true">
+    <view class="listview">
+      <view class="thumbnail" wx:for="{{productArr}}" wx:key="productlist" style="{{arr[index] ?'background:none;background-color:#fff': ''}}">
+          <image class="product_image {{arr[index] ? 'loaded':''}}" mode="aspectFit" src="{{arr[index] ?  productArr[index].Image : ''}}"></image>
+          <text class="label_title">{{productArr[index].Title}}</text>
+          <text class="label_price">¥{{productArr[index].RmbPrice}}</text>
+          <view class="country_view">
+            <image class="img_country" mode="scaleToFill" src="{{productArr[index].CountryImage}}"></image>
+            <text class="country_name">{{productArr[index].BusinessName}}</text>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

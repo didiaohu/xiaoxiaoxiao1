@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/productList/productList"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#ef3b51",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"light"
+  }
+}
