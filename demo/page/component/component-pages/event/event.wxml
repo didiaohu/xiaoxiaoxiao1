@@ -1,0 +1,7 @@
+<!--page/component/component-pages/event/event.wxml-->
+<view bindtap="tapme" data-id="view1">
+    <view data-id="view2">
+        测试target和currentTarget不同 | 点击我
+    </view>
+</view>
+

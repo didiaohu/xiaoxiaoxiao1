@@ -8,8 +8,15 @@
       <navigator url="navigate?title=navigate" hover-class="navigator-hover">
         <button type="default">跳转到新页面</button>
       </navigator>
+
+      <!--  redirect属性可以直接写属性名，原因在于它的类型是boolean，其他类型不能这么写，这样写可以让其值为true  -->
       <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">
         <button type="default">在当前页打开</button>
+      </navigator>
+
+      <!--  switchTab关闭所有非tabBar的页面  -->
+      <navigator open-type="switchTab" url="../../index"  hover-class="other-navigator-hover">
+        <button type="default">跳Tab</button>
       </navigator>
     </view>
   </view>

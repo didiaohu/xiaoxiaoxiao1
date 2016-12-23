@@ -29,6 +29,7 @@
     "page/component/component-pages/navigator/navigate",
     "page/component/component-pages/navigator/redirect",
     "page/component/component-pages/picker/picker",
+    "page/component/component-pages/event/event",
 
     "page/API/index/index",
 

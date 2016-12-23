@@ -10,10 +10,13 @@
                 <image class="image" src="../../resources/pic/1.jpg" />
             </view>
         </view>
+        <!-- mode = top ，裁切的是图片顶部区域，且从图片中间区域向两边扩散-->
+        <!-- mode可以取值top left；top right；仅 mode = top 的时候，可以理解为top center -->
         <view class="section section_gap">
             <view class="section__title"> internet image</view>
             <view class="section__ctn">
-                <image class="image" src="../../resources/pic/2.jpg" />
+                <!--<image mode="top left" class="image" src="../../resources/pic/2.jpg" />-->
+                <image mode="top" class="image" src="../../resources/pic/2.jpg" />
             </view>
         </view>
     </view>

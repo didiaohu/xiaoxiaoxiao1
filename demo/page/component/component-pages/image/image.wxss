@@ -2,6 +2,6 @@
     text-align: center;
 }
 .image{
-    width: 580rpx;
-    height: 208rpx;
+    width: 150rpx;
+    height: 408rpx;
 }

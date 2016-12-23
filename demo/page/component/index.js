@@ -2,6 +2,12 @@ Page({
   data: {
     list: [
       {
+        id: 'kuanjia',
+        name: '框架',
+        open: false,
+        pages: ['event']
+      },
+      {
         id: 'view',
         name: '视图容器',
         open: false,
