@@ -1,3 +1,6 @@
+page{
+  height: 3000px;
+}
 .canvas {
   width: 305px;
   height: 305px;

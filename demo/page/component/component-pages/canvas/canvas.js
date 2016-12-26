@@ -7,8 +7,21 @@ Page({
       vy: 2
     }
 
-    this.drawBall()
-    this.interval = setInterval(this.drawBall, 17)
+    // 使用1
+    // this.drawBall()
+    // this.interval = setInterval(this.drawBall, 17)
+
+
+    // 使用2
+    // save保存之前默认状态，restore后呢，会使用默认状态，在save和restore中间的状态不会使用
+    const ctx = wx.createCanvasContext('canvas')
+    ctx.save() 
+    ctx.setFillStyle('red')
+    ctx.scale(2, 2)
+    ctx.fillRect(10, 10, 150, 100)
+    ctx.restore()
+    ctx.fillRect(50, 50, 150, 100)
+    ctx.draw()
   },
   drawBall: function () {
     var p = this.position
@@ -44,6 +57,8 @@ Page({
       actions: context.getActions()
     })
 
+    
+
     function ball(x, y) {
       context.beginPath(0)
       context.arc(x, y, 5, 0, Math.PI * 2)
@@ -55,5 +70,11 @@ Page({
   },
   onUnload: function () {
     clearInterval(this.interval)
+  },
+  long: function(){
+    console.log(1111)
+  },
+  touchCancel: function(){
+    console.log(22222)
   }
 })

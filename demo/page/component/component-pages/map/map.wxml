@@ -7,11 +7,21 @@
       <map
         style="width: 100%; height: 300px;"
         latitude="{{latitude}}"
+        scale="8"
         longitude="{{longitude}}"
         markers="{{markers}}"
-        covers="{{covers}}"
+        include-points="{{points}}"
+        circles="{{circles}}"
+        bindmarkertap="bindmarkertap"
+        bindregionchange="bindregionchange"
+        bindtap="bindtap"
+        polyline="{{polyline}}"
         >
       </map>
     </view>
   </view>
 </view>
+<!--
+include-points: 这个属性是指在include-points中写的所有坐标点都能展示
+show-location  是指是否展示自己的位置
+-->

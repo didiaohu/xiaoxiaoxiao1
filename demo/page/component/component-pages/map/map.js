@@ -16,6 +16,47 @@ Page({
       longitude: 113.304520,
       iconPath: '/image/green_tri.png',
       rotate: 180
-    }]
+    }],
+    circles: [
+      {
+        latitude: 23.099994,
+        longitude: 113.344520,
+        color:'#000000AA',
+        fillColor: '#000000AA',
+        radius: 150
+      }
+    ],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      },  {
+        longitude: 153.324520,
+        latitude: 23.21229
+      }],
+      color:"#FF0000DD",
+      width: 2,
+      dottedLine: true
+    }], 
+    points:[
+      {
+        longitude: 113.3245211,
+        latitude: 23.10229
+      },
+      {
+        longitude: 113.324520,
+        latitude: 23.21229
+      },
+      {
+        longitude: 113.524520,
+        latitude: 23.21229
+      }
+    ]
+  },
+  bindmarkertap:function(){
+    console.log('bindmarkertap')
   }
 })
