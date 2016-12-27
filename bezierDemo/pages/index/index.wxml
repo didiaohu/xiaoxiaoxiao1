@@ -1,0 +1,2 @@
+<!--index.wxml-->
+<canvas bindtouchend="touchend" bindlongtap="touchmove" canvas-id="myCanvas" bindtouchmove="touchmove"/>
