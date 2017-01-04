@@ -3,7 +3,7 @@
 var app = getApp()
 Page({
   onReady:function(){
-      
+
   },
   data: {
     motto: 'Hello World',

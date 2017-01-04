@@ -5,7 +5,7 @@
  * Github: https://github.com/kiinlam/wetoast
  * LICENSE: MIT
  */
-
+function WeToastClass (){
 //构造函数
 function WeToast () {
     let pages = getCurrentPages()
@@ -97,7 +97,8 @@ WeToast.prototype.hide = function() {
         })
     }, 400)
 }
-
+     return new WeToast()
+}
 module.exports = {
-    WeToast
+    WeToast:WeToastClass
 }
