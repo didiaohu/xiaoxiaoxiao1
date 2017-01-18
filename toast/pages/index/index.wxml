@@ -6,3 +6,5 @@
 
 <!-- wetoast -->
 <template is="wetoast" data="{{...__wetoast__}}"/>
+
+<view>{{items.a}}</view>
