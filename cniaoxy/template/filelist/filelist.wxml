@@ -1,0 +1,5 @@
+<template name="shopList">
+    <block wx:if="{{isShow}}">
+        
+    </block>
+</template>

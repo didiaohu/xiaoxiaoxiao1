@@ -1,10 +1,12 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+<block wx:if="{{isShow}}">
+  <swiper class="banSwiper" indicator-dots indicator-color="#345677" autoplay>
+    <block wx:for="{{bannerList}}">
+      <swiper-item>
+        <image src="{{item.imgUrl}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+<import src="../../template/filelist/filelist.wxml"/>
+<template is="shopList"/>

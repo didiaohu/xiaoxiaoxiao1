@@ -1,1 +1,5 @@
-{}
+{
+    "window": {
+      "enablePullDownRefresh": true
+    }
+}
