@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.slide-box {
+	position:fixed;
+	bottom:px2rem(20);
+	right:0;
+	z-index:300;
+	text-align: right;
+	.has-bottombox & {
+		transform: translateY(px2rem(-110));
+	}
+}
+.slide-box .back-top {
+	width:px2rem(80);
+	height: px2rem(80);
+	border-radius:px2rem(80);
+	text-align: center;
+	display:inline-block;
+	background: #fff;
+	border:1px solid #e7e7e7;
+	visibility: hidden;
+	margin-right: px2rem(12);
+	margin-top: px2rem(12);
+	img{
+		width:px2rem(48);
+		height: px2rem(48);
+		margin-top:px2rem(16);
+	}
+}

@@ -1,0 +1,15 @@
+$designWidth : 750 !default;
+@function px2rem( $px ){
+	@return $px*320/$designWidth/20 + rem;
+}
+html{
+	height:100%;
+}
+body{
+	width: 160px;
+	height: 100%;
+	margin: 0 auto;
+}
+a{
+	width: 160px;
+}

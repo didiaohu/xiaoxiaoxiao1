@@ -1,0 +1,31 @@
+@charset "utf-8";
+.toast_alert{
+  position: fixed;
+  top: 45%;
+  width: 100%;
+  z-index: 206;
+}
+.toast_alert .box{
+	background:rgba(0,0,0,0.75);
+	padding:px2rem(20);
+	width:px2rem(320);
+	margin:0 auto;
+	color:#fff;
+	text-align:center;
+	font-size: px2rem(28);
+	white-space: normal;
+  word-break: break-all;
+	word-wrap: break-word;
+}
+.alert_fullbg_other{
+  display: none;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  z-index:200;
+  filter:alpha(opacity=0);
+  opacity:0;
+  background-color:#000;
+}
