@@ -7,11 +7,14 @@ a{
 	text-decoration: none;
 }
 body{
-	font-size: 12px;
+	font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+	font-size: 14px;
 }
 .box{
 	margin: 0 auto;
 	max-width: 6.4rem;
+	padding-bottom: 70px;
+	background: #f0f0f0;
 }
 .header{
 	height: 44px;
@@ -19,6 +22,49 @@ body{
 	align-items:center;
 	padding: 0 15px;
 	background: #ef1313;
+}
+.banner{
+	height: 2.6rem;
+	width: 6.4rem;
+	background: #666;
+}
+.content{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding-top: 0.1rem;
+	background: #fff;
+}
+.content div{
+	width: 25%;
+	height: 1.2rem;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction: column;
+}
+.content div img{
+	width: .7rem;
+	height: .7rem;
+	margin-bottom: 0.07rem;
+}
+.title{
+	height: .4rem;
+	background: #f0f0f0;
+	display: flex;
+	justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .1rem .15rem;
+}
+.title span:nth-child(1){
+	color:#999;
+	font-weight: 400;
+}
+.title span:nth-child(2){
+	color:#c9394a;
+	font-weight: 400;
 }
 .header_address{
 	margin-right: 15px;
@@ -38,6 +84,67 @@ body{
 	border-radius: 8px;
 	border:none;
 }
+.items{
+	padding: 0 .3rem;
+	background: #fff;
+}
+.item{
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	padding: .3rem 0;
+}
+.items .item:nth-child(4){
+	border: none;
+}
+.item_left{
+	float: left;
+	width: 1.6rem;
+	height: 1.2rem;
+	background: url("http://szimg.mukewang.com/5806de7c00014a3105400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.item_center{
+	margin-left: 1.75rem;
+	margin-right: 1.5rem;
+}
+.item_center p:nth-child(1){
+	font-size: .18rem;
+}
+.item_center p:nth-child(2){
+	font-size: .14rem;
+	color: #999;
+}
+.item_center p:nth-child(3){
+	font-size: .14rem;
+	color: #999;
+}
+.item_center p:nth-child(3) i{
+	color: #33b433;
+	margin-right: 0.05rem;
+}
+.item_center p:nth-child(4) i{
+	margin-right: 0.05rem;
+}
+.item_center p:nth-child(4){
+	font-size: .14rem;
+	color: #999;
+}
+.item_center p:nth-child(5){
+	font-size: .14rem;
+	color: #999;
+}
+.item_right{
+	position: absolute;
+	top: 30%;
+	right: .5rem;
+	color:#c9394a;
+}
+.item_right span{
+	font-size: .6rem;
+}
+.item_right em{
+	font-style: normal;
+}
 .footer{
 	position: fixed;
 	bottom: 0;
@@ -47,6 +154,7 @@ body{
 	text-align: center;
 	font-size: 12px;
 	border-top: 1px solid #ccc;
+	background: #fff;
 }
 .iconactive{
 	color:#c9394a;
