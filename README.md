@@ -16,3 +16,5 @@
 7）spa是单页应用，纯jq+html+css实现的
 
 8）rem+flex是响应式布局
+
+9）zepto的demo就是：包含各种zepto实战小demo
