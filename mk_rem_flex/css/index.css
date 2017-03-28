@@ -47,6 +47,7 @@ body{
 	width: .7rem;
 	height: .7rem;
 	margin-bottom: 0.07rem;
+	border-radius: .35rem;
 }
 .title{
 	height: .4rem;
@@ -100,7 +101,21 @@ body{
 	float: left;
 	width: 1.6rem;
 	height: 1.2rem;
+}
+.items .item:nth-child(1) .item_left{
 	background: url("http://szimg.mukewang.com/5806de7c00014a3105400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.items .item:nth-child(2) .item_left{
+	background: url("http://szimg.mukewang.com/583e42fb0001e04f05400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.items .item:nth-child(3) .item_left{
+	background: url("http://szimg.mukewang.com/57ec8a820001c60b05400300-360-202.jpg") no-repeat top center;
+	background-size:90% auto;
+}
+.items .item:nth-child(4) .item_left{
+	background: url("http://szimg.mukewang.com/576b84c10001b1c005400300-360-202.jpg") no-repeat top center;
 	background-size:90% auto;
 }
 .item_center{
