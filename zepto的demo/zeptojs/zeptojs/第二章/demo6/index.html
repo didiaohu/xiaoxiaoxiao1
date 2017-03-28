@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器中注意事项</title>
+</head>
+<body>
+	<div id="a#a">
+		<p>特殊符号</p>
+	</div>
+	<div class="test">
+		<input type="checkbox" checked="checked"  name="" value="123" />
+		<input type="checkbox" checked="checked" name="" value="123" />
+		<input type="checkbox" checked="checked" name="" value="123" />
+	</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// 选择器中的特殊符号 · 、# 、( 、] 等
+			$("#a\\#a").css("background" , "red");
+
+			// 选择器中有空格
+			console.log($("input :checked").length);
+			console.log($("input:checked").length);
+		})
+	</script>
+</body>
+</html>

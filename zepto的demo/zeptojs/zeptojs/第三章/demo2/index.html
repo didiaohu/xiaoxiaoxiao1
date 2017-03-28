@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto中DOM样式操作</title>
+	<style type="text/css">
+		.test{
+			color: red;
+		}
+		.size{
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<p id="attrs" title="属性" class="high another">属性操作</p>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// 属性操作
+			// alert($("#attrs").attr("title"));
+			// $("#attrs").attr("name","att");
+			// $("#attrs").attr({"name":"att" , "class":"test"});
+			// $("#attrs").removeAttr("title");  //只有一个必填属性参数
+
+			// 样式操作
+			// $("#attrs").addClass("test").addClass("size");
+			// $("#attrs").addClass("test size");
+			
+			// 删除class类
+			// $("#attrs").removeClass("high")
+			// $("#attrs").removeClass("high another")
+			// $("#attrs").removeClass()
+
+			// 切换样式
+			// $("p").toggle(function(){
+			// 	$(this).show();
+			// },function(){
+			// 	$(this).hide();
+			// });
+			// $("p").toggleClass("b")
+
+			// 判断是否含有某个样式
+			// console.log($("p").hasClass("high"));
+			// console.log($("p").hasClass("high another"));
+		})
+	</script>
+</body>
+
+</html>

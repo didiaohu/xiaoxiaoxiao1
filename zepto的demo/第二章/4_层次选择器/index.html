@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>层次选择器</title>
+</head>
+<body>
+	<div id="a">
+		<div class="one">
+			<p>我是孙子</p>
+		</div>
+	</div>
+	<div id="b">
+		<div>
+			<div>
+				我是b的孙子
+			</div>
+		</div>
+	</div>
+	<div id="c">
+		<div>111</div>
+		<h3>隔着h3</h3>
+		<p>222</p>
+		<p>333</p>
+	</div>
+	<div id="d">
+		<div>d_111</div>
+		<h3>d_隔着h3</h3>
+		<p>d_222</p>
+		<p>d_333</p>
+	</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// 1、后代选择器
+			$("#a .one p").css('color', 'red');
+
+			// 2、子元素选择器
+			$("#b>div").addClass("bb");
+
+			// 3、相邻元素选择器
+			$("#c div + p").css('color', 'red');
+
+			// 4、兄弟选择器
+			$("#d div ~ p").css('color', 'red');
+		});
+	</script>
+</body>
+</html>

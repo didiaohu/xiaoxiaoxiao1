@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto的链式调用写法</title>
+</head>
+<body>
+	<div></div>
+	<p></p>
+	<a href=""></a>
+	<!-- 
+		1、首先理解什么叫对象，什么叫操作
+			对象：$(selector)、next()、children()、parent()等     操作：addClass()、html()等
+		2、zepto中链式调用的写法
+	 -->
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 主要js程序
+			$('div').html("helloworld").addClass("hello").text()   //操作1
+			.next().html().addClass()    // p对象操作2
+			.next().html().addClass();
+
+			$('div')
+			.html()      // 
+			.addClass()   //
+			.text()
+			.html()
+			.addClass()
+			.removeClass().....
+
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

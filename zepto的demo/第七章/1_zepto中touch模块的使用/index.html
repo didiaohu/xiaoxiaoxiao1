@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zepto中touch模块的使用</title>
+  <meta name="viewport" content="maximum-scale=1,initial-scale=1,user-scalable=0">
+</head>
+<body>
+  <div id="touch_test" style="font-size: 36px; width: 200px; height: 200px; background: #cce">
+    touch events test
+  </div>
+  <script type="text/javascript" src="../../lib/zepto.min.js"></script>
+  <script type="text/javascript" src="../../lib/touch.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('#touch_test').bind('touchmove', function(e) { e.preventDefault() })
+    
+    listen_to('#touch_test')
+    
+    function listen_to(el) {
+      $(el).tap(function(){
+        console.log(' | tap!')
+      })
+      .doubleTap(function(){
+        console.log(' | double tap!')
+      })
+      .swipe(function(){
+        console.log(' | swipe!')
+      })
+      .swipeLeft(function(){
+        console.log(' | swipe left!')
+      })
+      .swipeRight(function(){
+        console.log(' | swipe right!')
+      })
+      .swipeUp(function(){
+        console.log(' | swipe up!')
+      })
+      .swipeDown(function(){
+        console.log(' | swipe down!')
+      })
+      .longTap(function(){
+        console.log(' | long tap!')
+      })
+      .singleTap(function(){
+        console.log(' | single tap!')
+      })
+    }
+  });
+    
+  </script>
+</body>
+</html>

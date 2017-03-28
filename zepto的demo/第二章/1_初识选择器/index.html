@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初识选择器</title>
+	<style type="text/css">
+		.world{
+			font-size: 36px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="hello" class="world">helloworld</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/**
+			 *  1、css选择器
+			 *  
+			 *  2、zepto.js选择器怎么写
+			 */
+
+			$(".world").html("12345"); 
+		});
+	</script>
+</body>
+</html>

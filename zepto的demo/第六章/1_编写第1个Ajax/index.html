@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编写第1个Ajax</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Ajax(){
+
+			var xmlHttpReq = null;
+
+			if(window.ActiveXObject){
+
+				// 兼容IE5、IE6
+				xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+			}else{
+
+				xmlHttpReq = new XMLHttpRequest();
+			}
+
+			xmlHttpReq.open("GET", "test.php", true);
+
+			xmlHttpReq.onreadystatechange = RequestCallBack;
+
+			function RequestCallBack(){
+				if(xmlHttpReq.readyState == 4){
+					if(xmlHttpReq.status == 200){
+						console.log("获取数据："+xmlHttpReq.responseText);
+					}
+				}
+			}
+
+			xmlHttpReq.send(null);
+
+		}
+	</script>
+</body>
+</html>

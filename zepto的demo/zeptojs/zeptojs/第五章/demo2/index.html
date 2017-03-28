@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之动画</title>
+	<style type="text/css">
+		div{
+			position: absolute;
+			font-size: 36px;
+			width: 100px;
+			height: 100px;
+			background: red;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>123</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script src="../../zepto/src/fx.js"></script>
+	<script src="../../zepto/src/fx_methods.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $('div').animate({left:"300px"}, 3000 , function(){
+			// 	alert(1)
+			// })
+
+			// 同时进行动画，但我想要的是先执行右移300，再执行高度变化
+			// $('div').animate({left:"300px" , height:"200px"} , 3000 , function(){
+			// 	alert(1)
+			// })
+
+			// 按顺序执行动画
+			// $('div').animate({left:"300px"} , 3000 , function(){
+			// 	$(this).animate({height:"200px"} , 2000 )
+			// });
+
+			// 等价关系
+			// $("div").animate({opacity:.2} , 3000)
+			// $("div").fadeTo(3000 , .2)
+		})
+	</script>
+</body>
+</html>

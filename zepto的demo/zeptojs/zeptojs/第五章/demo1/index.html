@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之动画</title>
+	<style type="text/css">
+		div{
+			font-size: 36px;
+		}
+	</style>
+</head>
+<body>
+	<div>123</div>
+	<button>toggle</button>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script src="../../zepto/src/fx.js"></script>
+	<script src="../../zepto/src/fx_methods.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button').on('click' , function(){
+				// $('div').toggle('slow');
+				// $('div').hide(3000);
+				// $('div').hide('slow');
+				// $('div').show('slow');
+				// $('div').fadeIn('slow');
+			    // $('div').fadeOut('slow');
+			    // $('div').fadeToggle('slow');
+			    // $('div, button').fadeToggle('slow');
+				// $("div").fadeTo(3000 , .3)
+			})
+		})
+	</script>
+</body>
+</html>

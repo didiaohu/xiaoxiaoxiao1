@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto中ajax的使用</title>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// load
+			$("resText").load('test.html',{name:"bob", age:"22"} function(responseText, textStatus, XMLHttpRequest){
+
+			})
+
+			// get
+			$.get("get1.php", {
+				name: 'bob',
+				age: '22'
+			}, function(data){
+
+			})
+
+			// post
+			$.post("get1.php", {
+				name: 'bob',
+				age: '22'
+			}, function(data){
+
+			})
+
+			// ajax
+			$.ajax({
+				type: 'GET',
+				url: 'test.json',
+				dataType: 'json',
+				beforeSend: function(xhr ){
+					
+				},
+				success: function(data){
+
+				},
+				complete: function(xhr, status){
+
+				},
+				error: function(xhr, textStatus, errorThrown){
+
+				}
+			})
+
+			/**
+				全局事件
+			*   1.ajaxStart(global) : 如果当前没有其它的ajax请求被激活就fired
+				2.ajaxBeforeSend(data:xhr,options)
+				3.ajaxSend(data:xhr , options)
+				4.ajaxSuccess(data:xhr,options,data)
+				5.ajaxError(data:xhr , options , data)
+				6.ajaxComplete(data:xhr , options)
+				7.ajaxStop(global)
+			*/
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+	<title>事件之其他用法</title>
+</head>
+<body>
+	<div style="font-size: 36px;">点击我~~</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 自定义事件
+			// $("div").bind("muke", function(){
+			// 	console.log("触发自定义事件");
+			// });
+			// $("div").trigger("muke");
+
+			// 命名空间
+			// $("div").bind("click", function(){
+			// 	console.log("我是普通的click事件");
+			// })
+			// $("div").bind("click.muke", function(){
+			// 	console.log("我是click.muke的事件");
+			// })
+
+			// $("div").unbind(".muke");
+			
+			// 绑定多个事件
+			$("div").bind("click", function(){
+				console.log(111)
+			}).bind("touchstart", function(){
+				console.log(222)
+			})
+
+			
+		});
+	</script>
+</body>
+</html>

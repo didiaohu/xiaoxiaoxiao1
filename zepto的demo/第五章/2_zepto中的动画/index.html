@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之动画</title>
+	<style type="text/css">
+		div{
+			position: absolute;
+			font-size: 36px;
+			width: 100px;
+			height: 100px;
+			background: red;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>123</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script src="../../lib/fx.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// animate() 动画函数
+			// $("div").animate({left:"300px"}, 3000, function(){
+			// 	alert("动画执行完毕");
+			// })
+			// 
+			// $("div").animate({left:"300px", height:"300px"}, 3000, function(){
+			// 	alert("动画执行完毕");
+			// })
+
+			// $("div").animate({left:"300px"}, 3000, function(){
+			// 	$(this).animate({height: "300px"},3000, function(){
+			// 		alert("动画有先后顺序");
+			// 	})
+			// })
+		})
+	</script>
+</body>
+</html>

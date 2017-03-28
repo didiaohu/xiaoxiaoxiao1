@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto中遍历节点</title>
+</head>
+<body>
+	<div id="children">
+		<div>
+			<p>p</p>
+		</div>
+		<ul class="ul" title="1">
+			<li>li</li>
+			<li>li</li>
+			<li>li</li>
+		</ul>
+	</div>
+
+
+	<div id="next">
+		<div></div>
+		<ul>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<p></p>
+	</div>
+
+
+	<div id="prev">
+		<div></div>
+		<ul>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<p></p>
+	</div>
+
+
+	<div id="siblings">
+		<div></div>
+		<ul>
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<p></p>
+	</div>
+
+
+	<div id="parent">
+		<div class="diva">
+			<div class="diva">
+				<div class="divb">
+					<div class="divc"></div>
+				</div>
+				<div class="divd">
+					<div class="divc"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="parents">
+		<div class="diva">
+			<div class="divb">
+				<div class="divc"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="closest">
+		<div class="diva">
+			<div class="divb">
+				<div class="divc"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// console.log($("#children").children());
+			// console.log($("#children").children(".ul"));  // 并不支持复杂选择器
+
+			// next是取得紧邻的后面的同辈元素
+			// console.log($("#next div").next());
+
+			// prev获取紧邻的前面的同辈元素
+			// console.log($("#next p").prev());
+
+			// siblings获取前后的所有同辈元素
+			// console.log($("#next ul").siblings());
+
+			// parent获取父级元素
+			// console.log($(".divc").parent());
+			// console.log($(".divc").parent(".divb"));
+
+			// parents获取祖先元素
+			// console.log($("#parents .divc").parents())
+			// console.log($("#parents .divc").parents(".diva"))
+
+			// closest获取最近的匹配元素
+			// console.log($("#closest .divc").closest("div"))
+			// console.log($("#closest .divc").closest(".diva"))
+		})
+	</script>
+</body>
+
+</html>

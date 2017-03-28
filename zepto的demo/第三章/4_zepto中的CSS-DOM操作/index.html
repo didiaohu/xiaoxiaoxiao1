@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto中的CSS-DOM操作</title>
+</head>
+<body>
+	<div class="one">我是div</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $(".one").css("color", "red").css("fontSize", "36px");
+			// $(".one").css({
+			// 	color:"red",
+			// 	fontSize:"36px"
+			// });
+			$(".one").width(500);
+			$(".one").height(500);
+			$(".one").css("background","red");
+		});
+	</script>
+</body>
+</html>

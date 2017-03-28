@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过滤选择器</title>
+</head>
+<body>
+	<div id="a">
+		<div>first</div>
+		<div>first</div>
+	</div>
+	<div id="b">
+		<div>last</div>
+		<div>last</div>
+	</div>
+	<div id="c">
+		<p>not</p>
+		<p class="not">not</p>
+	</div>
+	<div id="d">
+		<p>even</p>
+		<p>even</p>
+		<p>even</p>
+	</div>
+	<div id="e">
+		<p>odd</p>
+		<p>odd</p>
+		<p>odd</p>
+	</div>
+	<div id="f">
+		<p>eq</p>
+		<p>eq</p>
+	</div>
+	<div id="g">
+		<p>gt</p>
+		<p>gt</p>
+		<p>gt</p>
+	</div>
+	<div id="h">
+		<p>lt</p>
+		<p>lt</p>
+		<p>lt</p>
+	</div>
+	<div id="i">
+		<div class="mini">has</div>
+		<div>has</div>
+	</div>
+	<div id="j">
+		<div style="display: none">hidden</div>
+		<div style="visibility: hidden ">hidden</div>
+		<input type="hidden">
+	</div>
+	<div id="k">
+		<div>visible</div>
+	</div>
+	<div id="l">
+		<div title>[title]</div>
+		<div title="123">[title = 123]</div>
+		<div name="hello">[name != world]</div>
+		<div title="sky">[title ^= sk]</div>
+		<div title="sky">[title $= ky]</div>
+		<div title="green">[title *= ee]</div>
+		<div title="green" name="123">[name = 123][title *= ee]</div>
+	</div>
+	<div id="m">
+		<div>-child1</div>
+		<div>-child2</div>
+		<div>-child3</div>
+		<div>-child4</div>
+		<div>-child5</div>
+		<div>-child6</div>
+	</div>
+	<div id="n">
+		<form id="form1">
+			<input name="add" value="可用文本框 :enabled" /><br/>
+			<input name="email" disabled="disabled" value="不可用文本框 :disabled" /><br/>
+			<input type="text" value="文本框" />
+			<input type="password" value="密码框">
+		</form>
+	</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>层次选择器</title>
+</head>
+<body>
+	<div id="a">
+		<div>
+			<p>后代选择器</p>
+		</div>
+	</div>
+	<div id="b">
+		<div>
+			<p>子元素选择器</p>
+		</div>
+	</div>
+	<div id="c">
+		<p></p>
+		<h3>相邻元素选择器</h3>
+	</div>
+	<div id="d">
+		<p></p>
+		<div>兄弟选择器</div>
+		<div>兄弟选择器</div>
+	</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// 后代选择器
+			$("#a p").css("background" , "red");
+
+			// 子元素选择器
+			$("#b > div > p").css("background" , "red");
+
+			// 相邻元素选择器 , 等价关系
+			$("#c p + h3").css("background" , "red");   
+			$("#c p").next("h3").css("background" , "yellow");
+
+			// 兄弟选择器
+			$("#d p ~ div").css("background" , "red");
+
+		})
+	</script>
+</body>
+</html>

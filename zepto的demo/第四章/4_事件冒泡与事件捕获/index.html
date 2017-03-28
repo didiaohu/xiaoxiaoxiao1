@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件冒泡与事件捕获</title>
+</head>
+<body>
+	<div class="c" id="c">
+		<div class="b" id="b">
+			<div class="a" id="a">我是a标签</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 事件冒泡
+			/**
+			 * 顶级
+			 * .
+			 * body
+			 * c  事件   
+			 * b  	 
+			 * a  事件   点击
+			 *
+			 * 从底到顶级冒泡，过程中凡是元素添加事件的，都会被执行
+			 */
+			// $(".a").click(function(e){
+			// 	console.log("我是a标签");
+			// })
+			
+			// $(".c").click(function(e){
+			// 	console.log("我是c标签");
+			// })
+
+			// 事件捕获  zepto不支持事件捕获
+			/**
+			 * 顶级
+			 * .
+			 * body
+			 * c  事件   
+			 * b  事件	 
+			 * a  事件   点击
+			 *
+			 * 从顶级到底，过程中凡是元素添加事件的，都会被执行
+			 */
+			document.getElementById("a").addEventListener('click', function(e){
+				console.log("事件捕获a标签");
+			},true);
+			document.getElementById("c").addEventListener('click', function(e){
+				console.log("事件捕获c标签");
+			},true);
+		})
+
+
+	</script>
+</body>
+</html>

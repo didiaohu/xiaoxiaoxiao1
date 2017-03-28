@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto中DOM属性与样式操作</title>
+	<style type="text/css">
+		.red{
+			color: red;
+		}
+		.fs{
+			font-size: 36px;
+		}
+	</style>
+</head>
+<body>
+	<div title="sx" name="att" class="red fs">属性与样式操作</div>
+	<button>按钮</button>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 属性操作  attr("title")  attr("name","att")  attr({"name":"att" , "class":"test"})    removeAttr("title name")
+			// console.log($("div").attr("title"));
+			// $("div").attr("name","att");
+			// $("div").attr({"name":"att" , "class":"test"})
+			// $("div").removeAttr("title name");
+
+			// 添加样式操作   addClass
+			// $("div").addClass("red").addClass("fs");
+			// $("div").addClass("red fs");
+			
+			// 删除class类   removeClass
+			// $("div").removeClass();
+
+			// 切换样式  toggle   toggleClass
+			// $("button").click(function(){
+			// 	// $("div").toggle();   // show和hide的切换
+			// 	$("div").toggleClass("red");   // addClass("red")和removeClass("red");
+			// });	
+
+			// 判断是否含有某个样式  hasClass
+			console.log($("div").hasClass("red fs"))
+		});
+	</script>
+</body>
+</html>

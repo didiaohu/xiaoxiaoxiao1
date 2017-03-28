@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zepto中touch模块的使用</title>
+  <meta name="viewport" content="maximum-scale=1,initial-scale=1,user-scalable=0">
+
+</head>
+<body>
+
+  <div id="touch_test" style="width: 200px; height: 200px; background: #cce; -webkit-user-select: none">
+    touch events test
+  </div>
+  <script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+  <script type="text/javascript" src="../../zepto/src/touch.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('#touch_test').bind('touchmove', function(e) { e.preventDefault() })
+    listen_to('#touch_test')
+
+    // $('#touch_test').bind('tap', function(e) {
+    //   e.cancelTouch()
+    // })
+
+    function listen_to(el) {
+      $(el).tap(function(){
+        $(this).append(' | tap!')
+      })
+      .doubleTap(function(){
+        $(this).append(' | double tap!')
+      })
+      .swipe(function(){
+        $(this).append(' | swipe!')
+      })
+      .swipeLeft(function(){
+        $(this).append(' | swipe left!')
+      })
+      .swipeRight(function(){
+        $(this).append(' | swipe right!')
+      })
+      .swipeUp(function(){
+        $(this).append(' | swipe up!')
+      })
+      .swipeDown(function(){
+        $(this).append(' | swipe down!')
+      })
+      .longTap(function(){
+        $(this).append(' | long tap!')
+      })
+      .singleTap(function(){
+        $(this).append(' | single tap!')
+      })
+    }
+  });
+    
+  </script>
+</body>
+</html>

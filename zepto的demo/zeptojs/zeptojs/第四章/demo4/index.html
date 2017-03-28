@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之事件委托或代理</title>
+</head>
+<body>
+	<div class="top">
+		<div>
+			<div>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			// $("li").click(function() {  
+			//     alert("点击后触发");  
+			// });
+
+			// $("li").one('click' , function() {  
+			//     alert("点击后触发");  
+			// });
+
+			// $("li").bind('click' , function() {  
+			//     alert("点击后触发");  
+			// });
+			// $("li").unbind();
+
+			// 其实事件是绑定到document上面
+			// $("li").live('click' , function(){
+			// 	alert("点击后触发");
+			// })
+
+			// $("ul").delegate("li", "click", function(e){
+			// 	alert(1)
+			// })
+			// $("ul").undelegate();
+
+			// $("ul").on("click", "li", function(e){
+			// 	alert(1)
+			// })
+			// $("ul").off();
+		})
+	</script>
+</body>
+</html>

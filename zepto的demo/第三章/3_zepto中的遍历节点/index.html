@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto中的遍历节点</title>
+</head>
+<body>
+	<div id="one">
+		<h3>我是h3</h3>
+		<p>
+			<b>
+				我是b标签
+			</b>
+		</p>
+		<a>我是a标签</a>
+		<span>我是span</span>
+	</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// next是取得紧邻的后面的同辈元素
+			// console.log($("#one h3").next());
+
+			// prev获取紧邻的前面的同辈元素
+			// console.log($("#one a").prev());
+
+			// siblings获取前后的所有同辈元素
+			// console.log($("#one p").siblings());
+
+			// parent与parents直系亲属
+			// console.log($("b").parent());
+			console.log($("b").parents());
+		});
+	</script>
+</body>
+</html>

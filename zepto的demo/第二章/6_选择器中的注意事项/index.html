@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器中的注意事项</title>
+</head>
+<body>
+	<div id="a#a">a#a</div>
+	<div id="b">
+		<p>111</p>
+		<p>222</p>
+		<p>333</p>
+		<p>444</p>
+		<p>555</p>
+		<p>666</p>
+	</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 1、选择器中的特殊符号 · 、# 、( 、] 等
+			$("#a\\#a").css("color", "red");
+
+			// 2、选择器中的空格
+			$("#b p:nth-child(odd)").css("color", "red");
+		});
+	</script>
+</body>
+</html>

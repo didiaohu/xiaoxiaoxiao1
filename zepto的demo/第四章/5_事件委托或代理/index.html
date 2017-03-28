@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托或代理</title>
+</head>
+<body>
+	<ul>
+		<li>我是1</li>
+		<li>我是2</li>
+		<li>我是3</li>
+		<li>我是4</li>
+		<li>我是5</li>
+		<li>我是6</li>
+	</ul>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 绑定事件是非常消耗性能的
+			// bind  非常消耗性能
+			$('li').bind('click', function(e){
+				console.log("被点击了");
+			})
+
+			// click 非常消耗性能
+			 
+			// one 只被调用一次
+			// $('li').one('click', function(e){
+			// 	console.log("我只能调用一次");
+			// })
+
+			// live  document绑定事件（一次）
+			$("li").live('click', function(e){
+				/**
+				 * document  事件
+				 * body
+				 * div
+				 * div
+				 * div
+				 * .
+				 * .
+				 * .
+				 * ul  
+				 * li 
+				 *
+				 * live把事件绑在document，利用事件冒泡的方式，就叫做事件委托或代理 
+				 */
+			})
+			
+			// delegate
+			$("ul").delegate('li','click', function(e){
+				/**
+				 * document  
+				 * body
+				 * div
+				 * div
+				 * div
+				 * .
+				 * .
+				 * .
+				 * ul  	事件
+				 * li 
+				 *
+				 * 利用事件冒泡的方式，就叫做事件委托或代理 
+				 */
+			})
+			
+			// on 万金油
+			$("ul").on('click', 'li', function(e){
+
+			})
+			 
+			// unbind
+			// $("li").unbind();
+			
+			// off 
+			$("li").off();
+		});
+	</script>
+</body>
+</html>

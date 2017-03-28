@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之自定义事件和其他使用规则</title>
+</head>
+<body>
+	<div id="btn">1111</div>
+
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// 自定义事件
+			// $('#btn').bind('myclick' , function(e){
+			// 	alert(1)
+			// })
+			// $('#btn').trigger('myclick')
+
+			// $('#btn').bind('myclick' , function(e, mes1, mes2){
+			// 	alert(mes1 + mes2)
+			// })
+			// $('#btn').trigger('myclick', [1,2])
+
+			// 其他有趣用法
+			// $('#btn').bind('click touchstart' , function(e){
+			// 	console.log(11)
+			// })
+
+			// $('#btn').bind('click' , function(e){
+			// 	console.log(11)
+			// }).bind('touchstart.my', function(){
+			// 	console.log(22)
+			// })
+			// $("#btn").unbind('click').unbind('.my');
+
+			// $('#btn').bind('click', function(){
+			// 	console.log(1111)
+			// })
+			// $('#btn').bind('click.my', function(){
+			// 	console.log(2222)
+			// })
+			// $('#btn').unbind('.my');
+		})
+	</script>
+</body>
+</html>

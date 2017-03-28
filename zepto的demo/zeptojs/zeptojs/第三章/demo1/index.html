@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto中DOM操作</title>
+</head>
+<body>
+	<div class="content">
+		<div class="content-one">hello</div>
+	</div>
+	<ul class="ulcontent">
+		<li><p>123</p></li>
+		<li>2</li>
+		<li title="thr">3</li>
+	</ul>
+	<strong></strong>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var ndiv = $("<div class='a'>123</div>");
+			//$(".content").append(ndiv);
+
+			// 插入操作
+			//$(".content").append(ndiv);   
+			//ndiv.appendTo(".content"); 
+
+			// 元素内部前置内容
+			// $(".content").prepend(ndiv);
+			// ndiv.prependTo(".content");
+
+			// 每个匹配元素之后插入内容
+			// $(".content").after(ndiv);
+			// ndiv.insertAfter(".content");
+
+			// 每个匹配元素之前插入内容
+			// $(".content").before(ndiv);
+			// ndiv.insertBefore(".content"); 
+
+			// 删除操作
+
+			$("li").on("click" ,function(e){
+				alert(111);
+			})
+
+			// remove事件不存在，detach事件依然存在
+			// var $li = $(".ulcontent li:nth-child(1)").remove();
+			// $(".ulcontent").append($li);
+
+			// var $li = $(".ulcontent li:nth-child(1)").detach();
+			// $(".ulcontent").append($li);
+
+			// 不删除自身元素，而且清空其后代所有节点
+			// $(".ulcontent li:nth-child(1)").empty();
+
+			// 复制节点
+			// $("ul li").on("click" , function(){
+			// 	$(this).clone().appendTo("ul");
+			// })
+
+			// 包裹节点
+			// $("strong").wrap("<b></b>");
+
+			// 替换节点
+
+			
+		})
+	</script>
+</body>
+</html>

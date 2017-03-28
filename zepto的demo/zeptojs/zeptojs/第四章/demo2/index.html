@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zepto之事件绑定</title>
+</head>
+<body>
+	<div>123</div>
+	<a href="http://www.imooc.com"></a>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		// 事件绑定
+		$(document).ready(function(){
+			$('div').bind('click',function(e){
+
+			})
+
+			$('a').on('click',function(e){
+				e.preventDefault();
+			})
+		})
+	</script>
+</body>
+</html>

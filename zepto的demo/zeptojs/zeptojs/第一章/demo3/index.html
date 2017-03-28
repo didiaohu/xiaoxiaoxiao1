@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM对象与zepto对象转换</title>
+</head>
+<body>
+	<div id="a">123</div>
+	<div id="b">456</div>
+	<script type="text/javascript" src="../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			// DOM对象
+			var a = document.getElementById("a");
+
+			// zepto对象
+			var $zp_a = $('#a');
+
+			// DOM中的API  innerHTML
+			console.log(a.innerHTML)
+
+			// zepto对象无法使用DOM对象API
+			console.log('无法使用innerHTML' , $zp_a.innerHTML)
+
+			// zepto对象转换为DOM对象
+			var new_a = $zp_a[0];
+			console.log('可以使用innerHTML' , new_a.innerHTML)
+
+			// zepto对象转换为DOM对象
+			var new_a1 = $zp_a.get(0);
+			console.log('可以使用innerHTML' , new_a.innerHTML)
+
+			// DOM对象如何转换成zepto对象
+			var $new_a = $(a);
+			$new_a.addClass('new_a');
+		})
+
+	</script>
+</body>
+</html>

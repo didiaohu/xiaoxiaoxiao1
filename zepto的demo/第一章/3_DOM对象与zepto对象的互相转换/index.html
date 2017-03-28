@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM对象与zepto对象的互相转换</title>
+</head>
+<body>
+	<div id="one"></div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// js代码
+
+			// DOM对象
+			var one = document.getElementById('one');
+			// one.className = 'two';
+
+			// zepto对象
+			// $('#one').className = 'thr';
+			
+			// zepto对象转成DOM对象
+			// $('#one')[0].className = 'two';
+			// $('#one').get(0).className = 'thr';
+			
+			//DOM对象转成zepto对象 
+			$(one).addClass('four');
+
+		});
+	</script>
+</body>
+</html>

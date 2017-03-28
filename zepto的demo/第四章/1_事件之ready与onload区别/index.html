@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件之ready与onload的区别</title>
+</head>
+<body>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		// html文件 、 css文件 、 js文件 、 图片文件等
+		 
+		$(document).ready(function(){
+			// DOM加载完毕，图片并未完全加载，调用时机比较快
+		});
+
+		window.onload = function(){
+			// 全部文件加载完毕，调用时机比较久
+		}
+	</script>
+</body>
+</html>

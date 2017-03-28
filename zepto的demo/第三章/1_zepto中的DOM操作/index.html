@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto中的DOM操作</title>
+</head>
+<body>
+	<div id="a">
+		<div class="a_one"></div>
+	</div>
+	
+	<ul>
+		<li>
+			<span>删除</span>
+		</li>
+	</ul>
+	<div>
+		<p>本节是操作dom</p>
+	</div>
+	<div>
+		<p>本节是操作dom</p>
+	<div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var $cr = $("<div class='cr'>插入的div</div>");
+			// 插入操作
+			// $("#a").append($cr);
+			// $cr.appendTo($("#a"));
+			// $("#a").prepend($cr);
+			// $cr.prependTo($("#a"));
+			// $("#a").after($cr);
+			// $cr.insertAfter($("#a"));
+			// $("#a").before($cr);
+			// $cr.insertBefore($("#a"));
+			
+			// 删除 remove\empty
+			// $("ul li").remove();
+			// $("ul li").empty();
+
+			// 复制节点
+			// $("ul li").click(function(){
+			// 	$(this).clone().appendTo("ul");
+			// });
+			
+			// 替换节点  replaceWith
+			// $("p").replaceWith("<span>是的，哈哈</span>");
+
+			//包裹节点   wrap  wrapAll
+			// $("p").wrap("<div></div>");
+			$("p").wrapAll("<div></div>");
+		});
+	</script>
+</body>
+</html>

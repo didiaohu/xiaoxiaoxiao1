@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto选择器</title>
+	<style>
+		#a{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="a" class="b" >123</div>
+	<p class="b" >345</p>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 理解css选择器
+			// $("#a")  zepto选择器写法  等价于   document.getElementById("a");   来获取元素
+			console.log($("div").text());
+			console.log($("#a").text());
+			console.log($(".b").text());
+		})
+	</script>
+</body>
+</html>

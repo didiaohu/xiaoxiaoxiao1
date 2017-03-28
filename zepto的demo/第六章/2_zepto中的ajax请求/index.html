@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zepto中的ajax请求</title>
+</head>
+<body>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// get
+			$.get('urlxxx',function(response){
+			  $(document.body).append(response)
+			});
+
+			// post
+			$.post('urlxxx', { sample: 'payload' }, function(response){
+			 	
+			});
+			
+			// ajax
+			$.ajax({
+			  type: 'GET',
+			  url: 'urlxxx',
+			  data: { name: 'Zepto.js' },
+			  dataType: 'json',
+			  success: function(data){
+			    this.append(data.project.html)
+			  },
+			  error: function(xhr, type){
+			    alert('Ajax error!')
+			  }
+			})
+		});
+	</script>
+</body>
+</html>

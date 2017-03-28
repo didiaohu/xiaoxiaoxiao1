@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基础选择器</title>
+</head>
+<body>
+	<div id="a">ID选择器</div>
+	<div class="b">class选择器</div>
+	<h3>元素选择器</h3>
+	<p>群组选择器1</p>
+	<div id="two">群组选择器2</div>
+	<script type="text/javascript" src="../../zepto/src/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			// ID选择器
+			$("#a").css("background" , "red");
+
+			// class选择器
+			$(".b").css("background" , "red");
+
+			// 元素选择器
+			$("h3").css("background" , "red");
+
+			// 群组选择器
+			$("p , #two").css("background" , "red");
+
+			// 通配选择器
+			$("*").css("background" , "yellow");
+		})
+	</script>
+</body>
+</html>

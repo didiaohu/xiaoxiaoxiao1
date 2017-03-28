@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件之开头几种简写方式</title>
+</head>
+<body>
+	<div class="one"></div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function(){
+		// 	$(".one").html("helloworld");
+		// })
+
+		// $(function(){
+		// 	$(".one").html("helloworld");
+		// })
+
+		$().ready(function(){
+			$(".one").html("helloworld");
+		})
+	</script>
+</body>
+</html>

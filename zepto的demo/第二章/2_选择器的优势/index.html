@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器的优势</title>
+</head>
+<body>
+	<div id="tt"></div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<table id="tb">
+		<tbody>
+			<tr><td>第一行</td><td>第一行</td></tr>
+			<tr><td>第二行</td><td>第二行</td></tr>
+			<tr><td>第三行</td><td>第三行</td></tr>
+			<tr><td>第四行</td><td>第四行</td></tr>
+			<tr><td>第五行</td><td>第五行</td></tr>
+		</tbody>
+	</table>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/**
+			 * 1、完善的处理机制
+			 *
+			 * 2、当检测某个元素是否存在的时候
+			 *
+			 * 3、事件写法
+			 *
+			 * 4、特定表格隔行变色
+			 */
+
+			// 1、完善的处理机制
+			
+			// 传统写法
+			// var tt = document.getElementById("tt");
+			// tt.className = "hello";
+			
+			// zepto
+			// $("#tt").addClass("hello");
+
+
+			// 2、当检测某个元素是否存在的时候
+			// if($("#tt").length > 0){
+			// 	console.log("tt元素找到")
+			// }
+			
+
+
+			// 3、事件写法
+
+			// 传统写法
+			// var items = document.getElementsByTagName("li");
+			// for (var i = 0; i < items.length; i++) {
+			// 	items[i].onclick = function(){
+			// 		alert(1)
+			// 	}
+			// }
+
+			// // zepto写法
+			// $("li").on("click" , function(){
+			// 	alert(2)
+			// })
+
+			// 4、特定表格隔行变色
+
+			// 传统写法
+			// var item = document.getElementById("tb");
+			// var tbody = item.getElementsByTagName("tbody")[0]
+			// var trs = tbody.getElementsByTagName("tr");
+			// for (var i = 0; i < trs.length; i++) {
+			// 	if(i%2 == 0){
+			// 		trs[i].style.backgroundColor = "red";
+			// 	}
+				
+			// }
+
+			// // zepto写法
+			$("#tb tbody tr:nth-child(odd)").css("backgroundColor" , "red");
+
+
+		});
+	</script>
+</body>
+</html>

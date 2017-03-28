@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过滤选择器</title>
+</head>
+<body>
+	<div id="a">
+		<div title>[title]</div>
+		<div title="123">[title = 123]</div>
+		<div title="sky">[title ^= sk]</div>
+		<div title="sunshine">[title $= ine]</div>
+		<div title="blue">[title *= bl]</div>
+		<div title="green" name="123">[name = 123][title = green]</div>
+	</div>
+	<div id="b">
+		<div>-child1</div>   
+		<div>-child2</div>   
+		<div>-child3</div>
+		<div>-child4</div>
+		<div>-child5</div>
+		<div>-child6</div>
+	</div>
+	<script type="text/javascript" src="../../lib/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 属性过滤选择器
+			// $("#a div[title]").css('color', 'red');
+			// $("#a div[title='123']").css('color', 'red');
+			// $("#a div[title^='sk']").css('color', 'red');
+			 // $("#a div[title $= 'ine']").css('color', 'red');
+			// $("#a div[title *= 'bl']").css('color', 'red');
+			// $("#a div[title ='green'][name = '123']").css('color', 'red');
+			
+			// 子元素过滤选择器
+			// $("#b div:nth-child(2)").css("color", "red");
+			// $("#b div:nth-child(odd)").css("color", "red");
+			// $("#b div:nth-child(even)").css("color", "red");
+			$("#b div:nth-child(3n+1)").css("color", "red");
+		});
+	</script>
+</body>
+</html>
