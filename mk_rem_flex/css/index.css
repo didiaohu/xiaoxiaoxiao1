@@ -181,3 +181,74 @@ body{
 .footericon{
 	flex:1;
 }
+
+
+/*banner*/
+.banner {
+    overflow: hidden;
+    position: relative;
+}
+.inner {
+    position: relative;
+    width: 9999px;
+    left: 0;
+    top: 0;
+}
+.innerwraper {
+	width: 6.4rem;
+    float: left;
+}
+.innerwraper img{
+	width: 100%;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    content: "";
+    height: 0;
+}
+a {
+    text-decoration: none;
+}
+.left-arrow {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 10%;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+}
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 10%;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.pagination{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.pagination span{
+    display: inline-block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #9aa499;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pagination .active{
+    background-color: #fff;
+}
