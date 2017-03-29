@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单例模式</title>
+</head>
+<body>
+	<button id="loginbtn">按钮</button>
+	<script type="text/javascript">
+
+		var getSingle = function(fn){
+			var result;
+			return function(){
+				return result || (result = fn.apply(this, arguments));
+			}
+		}
+
+		var createSingle = getSingle(function(){
+			var div = document.createElement('div');
+			div.innerHTML = '我是登录浮窗';
+			div.style.display = 'none';
+			document.body.appendChild(div);
+			return div;
+		});
+		
+		document.getElementById("loginbtn").onclick = function(){
+			var a = createSingle();
+			var b = createSingle();
+
+			// 永远都是true，因为只有一个实例
+			console.log(a === b)
+		}
+
+		
+	</script>
+</body>
+</html>
