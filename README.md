@@ -18,3 +18,5 @@
 8）rem+flex是响应式布局
 
 9）zepto的demo就是：包含各种zepto实战小demo
+
+10）DesignPattern是用js实现的设计模式的demo
