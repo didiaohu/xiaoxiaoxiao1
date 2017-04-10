@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for-items="{{color}}"  >
+                <view  class="weui-grid"  data-number="{{item.number}}" bindtap="selectColor" >
+                    <view class="weui-grid__icon"  style="background:{{item.number}}"/>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>

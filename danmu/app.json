@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/selectColor/selectColor"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#EEAD0E",
+    "navigationBarTitleText": "闲鱼之视频播放器",
+    "navigationBarTextStyle":"white"
+  }
+}

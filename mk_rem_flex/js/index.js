@@ -30,7 +30,6 @@ spanGroup.on("click", function() {
     //导航切换
     _index = spanGroup.index($(this));
     selectPic(_index);
-    clearInterval(timer);
 })
 
 function autoGo(bol) {
@@ -52,7 +51,7 @@ function selectPic(num) {
     if( num%4 == 0){
         $(".pagination span").eq(0).addClass("active").siblings().removeClass("active");
     }
-    $(".inner").animate({
+    $(".inner").stop().animate({
         left: -num * imgWidth,
     }, 1000, function() {
         timer = setInterval(go, 3000);

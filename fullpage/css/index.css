@@ -1,0 +1,150 @@
+*{
+	margin: 0 auto;
+	padding: 0 auto;
+	list-style: none;
+}
+
+body{
+	font-family: PingFang-SC-Regular,Helvetica Neue,Helvetica,Droid Sans Fallback,microsoft yahei,sans-serif;
+}
+
+#fullpage{
+	max-width: 7.5rem;
+	margin:0 auto;
+}
+.section{
+	text-align: center;
+}
+.section1 h2{
+	position: absolute;
+	top: 3.28rem;
+	width: 100%;
+	font-size: 0.36rem;
+}
+
+.section1 .section1_p1{
+	position: absolute;
+	top: 4.0rem;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section1 .section1_p2{
+	position: absolute;
+	top: 4.5rem;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section1 .section1_div1{
+	position: absolute;
+	top: 6.4rem;
+	width: 7.2rem;
+	height: 3.6rem;
+	background:url("../img/page1_1.png") no-repeat top center;
+	background-size: 100%;
+}
+.section1 .section1_div2{
+	position: absolute;
+	top: 6rem;
+	left: 2.1rem;
+	width: 2.75rem;
+	height: 3.8rem;
+	background:url("../img/page1_2.png") no-repeat top center;
+	background-size: 100%;
+	z-index: 3;
+}
+.section1 .section1_div3{
+	position: absolute;
+	top: 5.86rem;
+	left: 3.07rem;
+	width: 2.66rem;
+	height: 2.5rem;
+	background:url("../img/page1_3.png") no-repeat top center;
+	background-size: 100%;
+}
+
+
+.section2 h2{
+	display: none;
+	position: absolute;
+	color: #fff;
+	top: 3.46rem;
+	width: 100%;
+	font-size: 0.36rem;
+}
+.section2_p1{
+	display: none;
+	position: absolute;
+	color: #fff;
+	top: 4.3rem;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section2_p2{
+	display: none;
+	position: absolute;
+	color: #fff;
+	top: 4.78rem;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section2 div{
+	display: none;
+	position: absolute;
+	top: 5.94rem;
+	width: 100%;
+	height: 3.4rem;
+	background: url("../img/page2_1.png") no-repeat top center;
+	background-size: 3.08rem 3.4rem;
+}
+
+
+.section3 h2{
+	display: none;
+	position: absolute;
+	top: 3.88rem;
+	width: 100%;
+	font-size: 0.36rem;
+}
+.section3 p{
+	display: none;
+	position: absolute;
+	top: 4.5rem;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section3 div{
+	display: none;
+	position: absolute;
+	top: 5.62rem;
+	width: 100%;
+	height: 3.86rem;
+	background: url("../img/page3_1.png") no-repeat top center;
+	background-size: 4.09rem 3.86rem;
+}
+
+
+.section4 h2{
+	display: none;
+	position: absolute;
+	top: 7.76rem;
+	width: 100%;
+	color: #fff;
+	font-size: 0.36rem;
+}
+.section4 p{
+	display: none;
+	position: absolute;
+	top: 8.4rem;
+	color: #fff;
+	font-size: 0.24rem;
+	width: 100%;
+}
+.section4 div{
+	display: none;
+	position: absolute;
+	top: 3.58rem;
+	width: 100%;
+	height: 3.68rem;
+	background: url("../img/page4_1.png") no-repeat top center;
+	background-size: 3.68rem 3.68rem;
+}

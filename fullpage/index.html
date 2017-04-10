@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>慕课网fullpage讲解</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/jquery-ui-1.10.3.min.js"></script>
+	<script src="./js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		// rem公式
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            if(clientWidth>=750){
+		                docEl.style.fontSize = '100px';
+		            }else{
+		                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		            }
+		        };
+
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		    recalc();
+		})(document, window);
+
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				verticalCentered: false,
+				slidesColor: ['#fff', '#2b333b', '#1bbc9b', '#b01e2b'],
+				anchors: ['page1', 'page2', 'page3', 'page4'],
+				navigation: true,
+				afterLoad: function(anchorLink, index){
+					if(index == 1){
+						$('.section1').find('h2').fadeIn();
+						$('.section1').find('.section1_p1').delay(500).fadeIn();
+						$('.section1').find('.section1_p2').delay(1000).fadeIn();
+						$('.section1').find('.section1_div1').delay(1500).fadeIn();
+						$('.section1').find('.section1_div2').delay(2000).fadeIn();
+						$('.section1').find('.section1_div3').delay(2500).fadeIn();
+					}else if(index == 2){
+						$('.section2').find('h2').fadeIn();
+						$('.section2').find('.section2_p1').delay(500).fadeIn();
+						$('.section2').find('.section2_p2').delay(1000).fadeIn();
+						$('.section2').find('div').delay(1500).fadeIn();
+					}else if(index == 3){
+						$('.section3').find('h2').fadeIn();
+						$('.section3').find('p').delay(500).fadeIn();
+						$('.section3').find('div').delay(1000).fadeIn();
+					}else{
+						$('.section4').find('div').fadeIn();
+						$('.section4').find('h2').delay(500).fadeIn();
+						$('.section4').find('p').delay(1000).fadeIn();
+					}
+				},
+				onLeave: function(index, direction){
+					if(index == 1){
+						$('.section1').find('h2').fadeOut();
+						$('.section1').find('.section1_p1').fadeOut();
+						$('.section1').find('.section1_p2').fadeOut();
+						$('.section1').find('.section1_div1').fadeOut();
+						$('.section1').find('.section1_div2').fadeOut();
+						$('.section1').find('.section1_div3').fadeOut();
+					}else if(index == 2){
+						$('.section2').find('h2').fadeOut();
+						$('.section2').find('.section2_p1').fadeOut();
+						$('.section2').find('.section2_p2').fadeOut();
+						$('.section2').find('div').fadeOut();
+					}else if(index == 3){
+						$('.section3').find('h2').fadeOut();
+						$('.section3').find('p').fadeOut();
+						$('.section3').find('div').fadeOut();
+					}else{
+						$('.section4').find('h2').fadeOut();
+						$('.section4').find('p').fadeOut();
+						$('.section4').find('div').fadeOut();
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section section1">
+			<h2>每门课都是真实商业案例</h2>
+			<p class="section1_p1">真实案例，真实场景，在实战中实践、操作、调试</p>
+			<p class="section1_p2">大牛带你体验BAT真实开发流程，所有开发为你呈现</p>
+			<div class="section1_div1"></div>
+			<div class="section1_div2"></div>
+			<div class="section1_div3"></div>
+		</div>
+		<div class="section section2">
+			<h2>强大的语言课程体系支持</h2>
+			<p class="section2_p1">学习环境与课程轻松对接，安装、调试、写入</p>
+			<p class="section2_p2">让你体验开发全流程</p>
+			<div></div>
+		</div>
+		<div class="section section3">
+			<h2>省去本地复杂的环境搭建</h2>
+			<p class="section3_p1">你可以告别在虚拟机中调试开发了</p>
+			<div></div>
+		</div>
+		<div class="section section4">
+			<h2>强大的语言课程体系支持</h2>
+			<p class="section3_p1">结合慕课网为你提供的云端学习工具，所见即所得</p>
+			<div></div>
+		</div>
+	</div>
+</body>
+</html>

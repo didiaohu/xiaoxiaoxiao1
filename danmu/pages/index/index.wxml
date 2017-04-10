@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="section tc">
+  <video id="myVideo" style="height:{{videoHeight}}px;width:{{videoWidth}}px" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入弹幕" bindblur="bindInputBlur" />
+        </view>
+    </view>
+  
+    <button style="margin:30rpx;" bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+          <view class="weui-cell__bd">随机颜色</view>
+          <view class="weui-cell__ft">
+              <switch checked bindchange="switchChange" />
+      </view>
+</view>
+<view class="colorstyle"  bindtap="selectColor">
+  <text>选择颜色</text>
+  <view style="height:80rpx;width:80rpx;line-height: 100rpx;margin:10rpx;background-color:{{numberColor}}"></view>
+</view>
+  
