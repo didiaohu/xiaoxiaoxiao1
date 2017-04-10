@@ -20,3 +20,5 @@
 9）zepto的demo就是：包含各种zepto实战小demo
 
 10）DesignPattern是用js实现的设计模式的demo
+
+11）fullpage是jquery的插件库jquery.fullpage.js，里面是一个应用于移动端的小项目，rem布局 + fullpage页面滑动
