@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跨浏览器的事件处理程序</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		// 事件依附元素作用域
+		var EventUtil = {
+			addHandler: function(element, type, handler){
+				if(element.addEventListener){
+					element.addEventListener(type, handler, false);
+				}else if(element.attachEvent){
+					element.attachEvent("on" + type, handler);
+				}else{
+					element["on"+type] = null
+				}
+			},
+			removeHandler: function(element, type, handler){
+				if(element.removeEventListener){
+					element.removeEventListener(type, handler, false);
+				}else if(element.detachEvent){
+					element.detachEvent("on" + type, handler);
+				}else{
+					element["on"+type] = null
+				}
+			}
+		}
+
+		var btn = document.getElementById("myBtn");
+		var handler = function(){
+			alert("Clicked");
+		}
+		EventUtil.addHandler(btn, "click", handler);
+		EventUtil.removeHandler(btn, "click", handler);
+
+	</script>
+</body>
+</html>

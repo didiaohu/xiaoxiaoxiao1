@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0级事件处理</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(){
+			alert('Clicked');
+		}
+
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(){
+			alert(this.id);
+		}
+	</script>
+</body>
+</html>

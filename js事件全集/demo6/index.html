@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IE中的事件对象</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		 // DOM0中获取事件对象
+		 var btn = document.getElementById("myBtn");
+		 btn.onclick = function(){
+		 	var events = window.event;
+		 	alert(events.type);    //"click"
+		 }
+
+		 // attachEvent方式获得事件对象
+		 var btn = document.getElementById("myBtn");
+		 btn.attachEvent("onclick", function(event){
+		 	alert(event.type);
+		 });
+
+		 // 有cancelBubble  returnValue  srcElement  type 
+		 var btn = document.getElementById("myBtn");
+		 btn.onclick = function(){
+		 	alert(window.event.srcElement === this);      //true
+		 }
+
+		 btn.attachEvent("onclick", function(event){
+		 	alert(event.srcElement === this);       //false
+		 })
+
+		 // IE浏览器中阻止默认事件
+		 var link = document.getElementById("myLink");
+		 link.onclick = function(){
+		 	window.event.returnValue = false;
+		 }
+
+		 // IE阻止事件冒泡
+		 var btn = document.getElementById("myBtn");
+		 btn.onclick = function(){
+		 	alert("Clicked");
+		 	window.event.cancelBubble = true;
+		 }
+		 document.body.onclick = function(){
+		 	alert("body clicked");
+		 }
+
+		 // 跨浏览器的事件对象
+		 var EventUtil = {
+		 	addHandler: function(element, type, handler){
+
+		 	},
+		 	getEvent: function(event){
+		 		return event? event : window.event;
+		 	},
+		 	getTarget: function(event){
+		 		return event.target || event.srcElement;
+		 	},
+		 	preventDefault: function(event){
+		 		if(event.preventDefault){
+		 			event.preventDefault();
+		 		}else{
+		 			event.returnValue = false;
+		 		}
+		 	},
+		 	removeHandler: function(element, type, handler){
+
+		 	},
+		 	stopPropagation: function(event){
+		 		if(event.stopPropagation){
+		 			event.stopPropagation();
+		 		}else{
+		 			event.cancelBubble = true;
+		 		}
+		 	}
+		 }
+
+		 btn.onclick = function(event){
+		 	var event = EventUtil.getEvent(event);
+		 	var target = EventUtil.getTarget(event);
+		 }
+
+		btn.onclick = function(event){
+		 	var event = EventUtil.getEvent(event);
+		 	EventUtil.preventDefault(event);
+		}
+
+		btn.onclick = function(event){
+			alert("Clicked");
+		 	var event = EventUtil.getEvent(event);
+		 	EventUtil.stopPropagation(event);
+		}
+
+		document.body.onclick = function(event){
+			alert("Body clicked");
+		}
+	</script>
+</body>
+</html>

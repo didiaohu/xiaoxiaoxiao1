@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		// 都含有event事件
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(event){
+			alert(event.type);
+		}
+		btn.addEventListener = function(event){
+			alert(event.type);
+		}
+
+		// target和currentTarget
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(event){
+			alert(event.currentTarget === this);    //true
+			alert(event.target === this);			//true
+		}
+
+		document.body.onclick = function(event){
+			alert(event.currentTarget === document.body);    //true
+			alert(this === document.body);				//true
+			alert(event.target === document.getElementById("myBtn"));  //true
+		}
+
+		// type的作用
+		var btn = document.getElementById("myBtn");
+		var handler = function(event){
+			switch(event.type){
+				case "click":
+					alert("Clicked");
+					break;
+				case "mouseover":
+					event.target.style.backgroundColor = "red";
+					break;
+				case "mouseout":
+					event.target.style.backgroundColor = "";
+					break;
+			}
+		};
+		btn.onclick = handler;
+		btn.onmouseover = handler;
+		btn.onmouseout = handler;
+
+		// 阻止默认行为
+		var link = document.getElementById("myLink");
+		link.onclick = function(event){
+			event.preventDefault();
+		}
+
+		// 取消事件捕获或者冒泡
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(event){
+			alert("Clicked");
+			event.stopPropagation();
+		}
+		document.body.onclick = function(event){
+			alert("Body clicked");
+		}
+
+		// eventPhase
+		var btn = document.getElementById("myBtn");
+		btn.onclick = function(event){
+			alert(event.eventPhase);    //2   事件处理程序处于目标对象上
+		}
+
+		document.body.addEventListener("click", function(event){
+			alert(event.eventPhase);     //1  捕获阶段调用的事件处理程序
+		}, true);
+
+		document.body.onclick = function(event){
+			alert(event.eventPhase);       //3  冒泡阶段调用的事件处理程序
+		} 
+	</script>
+</body>
+</html>

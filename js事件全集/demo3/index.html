@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IE事件处理程序</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		// 事件依附元素作用域
+		var btn = document.getElementById("myBtn");
+		btn.attachEvent("onclick", function(){
+			alert("Clicked");
+		});
+
+		// this指向window
+		btn.attachEvent("onclick", function(){
+			alert(this === window);
+		});
+
+		// 添加多个事件
+		var btn = document.getElementById("myBtn");
+		btn.attachEvent("onclick", function(){
+			alert("Clicked");
+		});
+		btn.attachEvent("onclick", function(){
+			alert("Hello world!");
+		});
+		
+
+		// 移除事件
+		var btn = document.getElementById("myBtn");
+		var handler = function(){
+			alert(this.id);
+		}
+		btn.attachEvent("click", handler);
+
+		btn.detachEvent("click", handler);
+
+
+	</script>
+</body>
+</html>

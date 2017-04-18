@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM2级事件处理</title>
+</head>
+<body>
+	<button id="myBtn">点击我</button>
+	<script type="text/javascript">
+		// 事件依附元素作用域
+		var btn = document.getElementById("myBtn");
+		btn.addEventListener("click", function(){
+			alert(this.id);
+		}, false);
+
+		// 元素可以添加多个事件
+		var btn = document.getElementById("myBtn");
+		btn.addEventListener("click", function(){
+			alert(this.id);
+		}, false);
+		btn.addEventListener("click", function(){
+			alert("Hello World");
+		}, false);
+
+		// 如何解除事件绑定
+		// 错误做法
+		var btn = document.getElementById("myBtn");
+		btn.addEventListener("click", function(){
+			alert(this.id);
+		}, false);
+
+		btn.removeEventListener("click", function(){
+			alert(this.id);
+		}, false);
+
+		// 正确做法
+		var btn = document.getElementById("myBtn");
+		var handler = function(){
+			alert(this.id);
+		}
+		btn.addEventListener("click", handler, false);
+
+		btn.removeEventListener("click", handler, false);
+
+
+	</script>
+</body>
+</html>
