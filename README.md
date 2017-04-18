@@ -23,4 +23,4 @@
 
 11）fullpage是jquery的插件库jquery.fullpage.js，里面是一个应用于移动端的小项目，rem布局 + fullpage页面滑动
 
-12) js事件全集是将所有事件的知识点写成Demo，包括浏览器兼容
+12）js事件全集是将所有事件的知识点写成Demo，包括浏览器兼容
