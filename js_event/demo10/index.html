@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js中常用的事件</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// UI事件
+		// 1、load
+		// 当页面完全加载后在window上面触发
+		EventUtil.addHandler(window, "load", function(e){
+			alert("Loaded!");
+		});
+
+		// img标签加载完毕
+		EventUtil.addHandler(image, "load", function(e){
+			e = EventUtil.getEvent(e);
+			alert(EventUtil.getTarget(e).src);
+		})
+
+		// 实例img预加载
+		EventUtil.addHandler(window, "load", function(){
+			var image = new Image();
+			EventUtil.addHandler(image, "load", function(event){
+				alert("Image loaded!");
+			})
+		})
+		// js动态加载完毕
+		EventUtil.addHandler(window, "load", function(){
+			var script = document.createElement("script");
+			EventUtil.addHandler(script, "load", function(event){
+				alert("js Loaded");
+			});
+			script.src = "example.js";
+			document.body.appendChild(script);
+		});
+
+		// css动态加载完毕
+		EventUtil.addHandler(window, "load", function(){
+			var link = document.createElement("link");
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			EventUtil.addHandler(link, "load", function(event){
+				alert("css Loaded");
+			});
+			link.href = "example.css";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		});
+
+		// 2、unload事件
+		EventUtil.addHandler(window, "unload", function(event){
+			alert("Unloaded");
+		});
+
+		// 3、resize事件
+		EventUtil.addHandler(window, "resize", function(event){
+			alert("Resized");
+		})
+
+		// 4、scroll事件.  主要针对新旧浏览器
+		EventUtil.addHandler(window, "scroll", function(event){
+			if(document.compatMode == "CSS1Compat"){
+				// 新
+				alert(document.documentElement.scrollTop)
+			}else{
+				// 旧
+				alert(document.body.scrollTop);
+			}
+		});
+
+		// 鼠标事件
+		EventUtil.addHandler(document, "mousedown", function(event){
+			alert("mousedown");
+		})
+		EventUtil.addHandler(document, "mouseup", function(event){
+			alert("mouseup");
+		})
+		EventUtil.addHandler(div, "click", function(event){
+			alert("client" + event.clientX);
+			alert("client" + event.pageX);
+			alert("client" + event.screenX);
+		})
+
+		// 键盘事件   在文本框内按下键盘
+		var textBox = document.getElementById("textBox");
+		EventUtil.addHandler(textBox, "keyUp", function(event){
+			alert(event.keyCode);
+		})
+
+		// 触摸与手势事件
+		function handleTouchEvent(event){
+			switch(event.type){
+				case "touchstart": 
+					alert("touchstart");
+					break;
+				case "touchmove":
+					alert("touchmove");
+					break;
+				case "touchend":
+					alert("touchend");
+					break;
+			}
+		}
+		EventUtil.addHandler(document, "touchstart", handleTouchEvent);
+		EventUtil.addHandler(document, "touchmove", handleTouchEvent);
+		EventUtil.addHandler(document, "touchend", handleTouchEvent);
+
+	</script>
+</body>
+</html>
