@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>小项目</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#canvas{
+			height: 500px;
+		}
+		li{
+			float: left;
+			width: 100px;
+			height: 30px;
+			border-radius: 10px;
+			background: #333;
+			text-align: center;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="canvas"></div>
+	<ul id="ul">
+		<li>红色</li>
+		<li>黑色</li>
+		<li>蓝色</li>
+		<li>黄色</li>
+		<li>绿色</li>
+	</ul>
+	<script type="text/javascript">
+		var ul = document.getElementById('ul');
+		var li = document.getElementsByTagName('li');
+		var canvas = document.getElementById('canvas');
+		ul.addEventListener('click', function(e){
+			var that = e.target;
+			console.log(e);
+			if(that.innerHTML == "红色"){
+				canvas.style.background = "red";
+			}else if(that.innerHTML == "黑色"){
+				canvas.style.background = "black";
+			}else if(that.innerHTML == "蓝色"){
+				canvas.style.background = "blue";
+			}else if(that.innerHTML == "黄色"){
+				canvas.style.background = "yellow";
+			}else{
+				canvas.style.background = "green";
+			}
+		});
+	</script>
+</body>
+</html>

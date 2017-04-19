@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>现代浏览器自定义事件</title>
+</head>
+<body>
+	<div id="testBox"></div>
+	<script type="text/javascript">
+		// 现代浏览器自定义事件
+		var evt = document.createEvent('Event');
+		evt.initEvent('customEvent', true, true);
+		var obj = document.getElementById('testBox');
+		obj.addEventListener('customEvent', function(){
+		    alert('customEvent 事件触发了');
+		}, false);
+		obj.dispatchEvent(evt);
+	</script>
+</body>
+</html>

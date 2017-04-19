@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件冒泡和事件捕获</title>
+</head>
+<body>
+	<div id="parent">
+	　　<div id="child" class="child"></div>
+	</div>
+
+	<ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+    </ul>
+	<script type="text/javascript">
+		// 事件冒泡
+		document.getElementById("parent").addEventListener("click",function(e){
+           alert("parent事件被触发，"+this.id);
+        })
+        document.getElementById("child").addEventListener("click",function(e){
+           alert("child事件被触发，"+this.id)
+        })
+
+        // 事件捕获
+        document.getElementById("parent").addEventListener("click",function(e){
+            alert("parent事件被触发，"+e.target.id);
+        },true)
+        document.getElementById("child").addEventListener("click",function(e){
+            alert("child事件被触发，"+e.target.id)
+        },true)
+
+        // 看个小案例
+        // 这个是利用事件冒泡
+        $("ul").on("mouseover",function(e){
+            $(e.target).css("background-color","#ddd").siblings().css("background-color","white");
+        })
+
+        // 不利用事件捕获，貌似没有任何区别
+        $("li").on("mouseover",function(){
+            $(this).css("background-color","#ddd").siblings().css("background-color","white");
+        })
+
+        // 但是$("li")已经遍历了li，还有就是如果我们要插入一个新的li，那么还要给li重新添加事件，性能太差
+        $("li").on("mouseover",function(){
+            $(this).css("background-color","#ddd").siblings().css("background-color","white");
+        })
+
+        // 如果插入一个li
+        $("ul").on("mouseover",function(){
+            $("<li>item7</li>").appendTo("ul");   // item7直接具有事件，无需重新绑定事件
+        })
+        $("li").on("mouseover",function(){
+            $("<li>item7</li>").appendTo("ul");   // item7是不具有事件的，需要重新绑定事件
+        })
+
+	</script>
+</body>
+</html>
