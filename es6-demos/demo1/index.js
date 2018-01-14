@@ -1,6 +1,4 @@
-// let and const
 
-/*-------------------*/
 {
   let a = 10;
   var b = 1;
@@ -9,7 +7,6 @@
 console.log(a) // ReferenceError: a is not defined.
 console.log(b) // 1
 
-/*-------------------*/
 
 for (let i = 0; i < 10; i++) {
   // ...
@@ -18,7 +15,7 @@ for (let i = 0; i < 10; i++) {
 console.log(i);
 // ReferenceError: i is not defined
 
-/*-------------------*/
+
 var a = [];
 for (var i = 0; i < 10; i++) {
   a[i] = function () {
@@ -36,8 +33,6 @@ for (let i = 0; i < 10; i++) {
 }
 a[6](); // 6
 
-
-/*-------------------*/
 
 // var 的情况
 console.log(foo); // 输出undefined
