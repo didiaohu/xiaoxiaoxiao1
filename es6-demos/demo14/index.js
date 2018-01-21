@@ -1,3 +1,5 @@
+// Genertaor 函数
+
 {
   // genertaor基本定义
   let tell=function* (){

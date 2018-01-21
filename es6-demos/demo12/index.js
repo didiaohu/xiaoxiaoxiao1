@@ -1,3 +1,5 @@
+// Promis对象
+
 {
   // 基本定义
   let ajax=function(callback){

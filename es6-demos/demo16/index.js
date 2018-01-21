@@ -1,3 +1,5 @@
+// Module的语法
+
 // export let A=123;
 //
 // export function test(){

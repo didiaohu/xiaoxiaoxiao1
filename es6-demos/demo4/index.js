@@ -1,3 +1,5 @@
+// 数值的扩展
+
 {
   console.log('B',0B111110111);
   console.log(0o767);

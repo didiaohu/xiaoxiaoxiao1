@@ -1,3 +1,5 @@
+// Symbol语法
+
 {
   // 声明
   let a1=Symbol();

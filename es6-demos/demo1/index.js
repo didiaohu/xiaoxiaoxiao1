@@ -1,3 +1,4 @@
+// let 和 const
 
 {
   let a = 10;

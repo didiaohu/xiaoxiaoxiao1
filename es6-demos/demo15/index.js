@@ -1,3 +1,4 @@
+// Decorator 修饰器
 {
   let readonly=function(target,name,descriptor){
     descriptor.writable=false;

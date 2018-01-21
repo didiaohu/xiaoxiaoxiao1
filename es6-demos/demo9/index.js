@@ -1,3 +1,5 @@
+// Set 和 Map
+
 {
   let list = new Set();
   list.add(5);

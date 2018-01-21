@@ -1,3 +1,5 @@
+// Class类
+
 {
   // 基本定义和生成实例
   class Parent{

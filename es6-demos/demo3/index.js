@@ -1,3 +1,4 @@
+// 字符串的扩展
 
 for (let codePoint of 'foo') {
   console.log(codePoint)
