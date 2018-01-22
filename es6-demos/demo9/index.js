@@ -1,4 +1,4 @@
-// Set 和 Map
+// Set和Map数据结构
 
 {
   let list = new Set();

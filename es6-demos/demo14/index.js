@@ -1,4 +1,4 @@
-// Genertaor 函数
+// Generator 函数 和 async 函数
 
 {
   // genertaor基本定义

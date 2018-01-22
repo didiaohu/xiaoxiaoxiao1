@@ -1,4 +1,4 @@
-// Proxy
+// Proxy 和 Reflect
 
 {
   let obj={

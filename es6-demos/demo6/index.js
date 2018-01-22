@@ -1,4 +1,4 @@
-// 函数扩展
+// 函数的扩展
 
 {
   function test(x, y = 'world'){

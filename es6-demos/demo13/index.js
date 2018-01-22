@@ -1,4 +1,4 @@
-// iterator 和 for of
+// Iterator 和 for...of 循环
 {
   let arr=['hello','world'];
   let map=arr[Symbol.iterator]();

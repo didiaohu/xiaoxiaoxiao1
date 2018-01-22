@@ -1,4 +1,4 @@
-// Promis对象
+// Promise 对象
 
 {
   // 基本定义
