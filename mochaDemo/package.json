@@ -1,0 +1,14 @@
+{
+  "name": "mochatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ag_dubs <wombat@npmjs.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.0.0"
+  }
+}
